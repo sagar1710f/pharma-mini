@@ -52,12 +52,188 @@
                 width: 100%;
                 object-fit: cover;
             }
+
+            /* Adjust founder info card on mobile */
+            .founder-info-card {
+                position: relative;
+                border-radius: 0.5rem;
+                margin-top: -2rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+                background: rgb(21, 128, 61);
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            }
+
+            /* Adjust founder achievements spacing */
+            .founder-achievements {
+                margin-top: 2rem;
+            }
+
+            .founder-achievements .flex {
+                margin-bottom: 1.5rem;
+            }
+
+            /* Adjust section headings */
+            h2.text-3xl {
+                font-size: 1.875rem;
+                line-height: 2.25rem;
+                padding: 0 1rem;
+            }
+
+            /* Adjust icon boxes */
+            .w-16.h-16 {
+                width: 3.5rem;
+                height: 3.5rem;
+            }
+
+            .text-2xl {
+                font-size: 1.25rem;
+            }
         }
 
-        /* Cart responsive adjustments */
+        /* Small mobile adjustments */
         @media (max-width: 480px) {
             #cart {
-                width: 100%;
+                width: 100% !important;
+            }
+
+            /* Adjust founder image height */
+            .founder-image {
+                max-height: 250px;
+            }
+
+            /* Adjust spacing for contact cards */
+            .grid.md\:grid-cols-3 {
+                gap: 1rem;
+            }
+
+            .rounded-lg {
+                border-radius: 0.5rem;
+            }
+
+            /* Adjust text sizes */
+            .text-3xl {
+                font-size: 1.5rem;
+                line-height: 2rem;
+            }
+
+            .text-xl {
+                font-size: 1.125rem;
+                line-height: 1.75rem;
+            }
+
+            /* Adjust padding */
+            .py-12 {
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+            }
+
+            .px-4 {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            /* Improve touch targets */
+            .contact-link {
+                padding: 0.5rem;
+                display: inline-block;
+            }
+
+            .founder-info-card {
+                margin-top: -1.5rem;
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                padding: 1rem;
+            }
+        }
+
+        /* Add these styles to your existing styles */
+        .founder-image-container {
+            position: relative;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            background: #fff;
+        }
+
+        .founder-image {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .founder-image-container:hover .founder-image {
+            transform: scale(1.02);
+        }
+
+        .founder-info-card {
+            position: relative;
+            margin-top: 0;
+            background: #fff;
+            padding: 1.5rem;
+            border-top: 4px solid #15803d;
+        }
+
+        .founder-title {
+            color: #15803d;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .founder-name {
+            color: #1f2937;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+        }
+
+        .founder-role {
+            display: flex;
+            align-items: center;
+            color: #4b5563;
+            font-size: 1rem;
+        }
+
+        .founder-role i {
+            color: #15803d;
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .founder-image-container {
+                max-width: 100%;
+                margin: 0 auto;
+            }
+
+            .founder-info-card {
+                padding: 1.25rem;
+            }
+
+            .founder-name {
+                font-size: 1.25rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .founder-info-card {
+                padding: 1rem;
+            }
+
+            .founder-title {
+                font-size: 0.75rem;
+            }
+
+            .founder-name {
+                font-size: 1.125rem;
+            }
+
+            .founder-role {
+                font-size: 0.875rem;
             }
         }
     </style>
@@ -140,29 +316,59 @@
     <!-- Founder Section -->
     <section class="py-12 md:py-16 bg-white">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center founder-section">
-                <div class="relative">
-                    <img src="images/About.jpeg" alt="Dr. Smita Vhatkar Kothmire" class="rounded-lg shadow-lg w-full founder-image">
-                    <!-- <div class="absolute bottom-4 left-4 bg-green-700 text-white px-4 py-2 rounded-lg">
-                        <h3 class="text-lg font-semibold">Dr. Smita Vhatkar Kothmire</h3>
-                        <p class="text-sm">Founder & Chief Ayurvedic Expert</p>
-                    </div> -->
+            <h2 class="text-3xl font-bold text-center mb-8 md:mb-12">Meet Our Founder</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start founder-section">
+                <div class="founder-image-container">
+                    <img src="images/About.jpeg" alt="Dr. Smita Vhatkar Kothmire" class="founder-image">
+                    <div class="founder-info-card">
+                        <div class="founder-title">Founder & Chief Expert</div>
+                        <h3 class="founder-name">Dr. Smita Vhatkar Kothmire</h3>
+                        <div class="founder-role">
+                            <i class="fas fa-stethoscope"></i>
+                            <span>Ayurvedic Medicine Specialist</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="space-y-6">
-                    <h2 class="text-3xl font-bold text-gray-800">Our Founder's Vision</h2>
-                    <p class="text-gray-600">With over 25 years of experience in Research and Development, Dr. Smita leads our commitment to authentic Ayurvedic solutions. A topper from Podar Ayurvedic Medical College, Mumbai, she ensures the highest quality standards in all our products.</p>
+                <div class="space-y-6 founder-achievements mt-8 md:mt-0">
                     <div class="space-y-4">
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
-                            <p class="text-gray-700">Extensive research in Ayurvedic medicine and modern healthcare integration</p>
+                        <div class="flex items-start space-x-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-green-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Academic Excellence</h3>
+                                <p class="text-gray-600">Topper from Podar Ayurvedic Medical College, Mumbai</p>
+                            </div>
                         </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
-                            <p class="text-gray-700">Development of innovative Ayurvedic formulations for contemporary health challenges</p>
+
+                        <div class="flex items-start space-x-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-flask text-green-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Research Experience</h3>
+                                <p class="text-gray-600">25 years of experience in Research and Development</p>
+                            </div>
                         </div>
-                        <div class="flex items-start space-x-3">
-                            <i class="fas fa-check-circle text-green-600 mt-1"></i>
-                            <p class="text-gray-700">Commitment to maintaining traditional Ayurvedic principles while embracing modern production standards</p>
+
+                        <div class="flex items-start space-x-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-mortar-pestle text-green-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Production Expertise</h3>
+                                <p class="text-gray-600">Expert in Production of all types of Ayurvedic products and medicines</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-4 p-4 bg-white rounded-lg hover:shadow-md transition-shadow">
+                            <div class="flex-shrink-0 w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-award text-green-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-800">Quality Standards</h3>
+                                <p class="text-gray-600">Dedicated to maintaining highest quality standards in Ayurvedic medicine</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -200,31 +406,41 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact Information -->
     <section class="py-12 md:py-16 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">Get in Touch</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-phone text-green-600"></i>
+            <h2 class="text-3xl font-bold text-center mb-8 md:mb-12">Contact Information</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
+                <div class="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                        <i class="fas fa-phone-alt text-green-600 text-xl md:text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Phone</h3>
-                    <p class="text-gray-600">+91 9022590861</p>
+                    <h3 class="text-xl font-bold text-center mb-3 md:mb-4">Phone</h3>
+                    <p class="text-gray-600 text-center">
+                        <a href="tel:+919022590861" class="contact-link hover:text-green-600 transition-colors">
+                            +91 9022590861
+                        </a>
+                    </p>
                 </div>
-                <div class="text-center">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-envelope text-green-600"></i>
+
+                <div class="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                        <i class="fas fa-envelope text-green-600 text-xl md:text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Email</h3>
-                    <p class="text-gray-600">smita.vhatkar@gmail.com</p>
+                    <h3 class="text-xl font-bold text-center mb-3 md:mb-4">Email</h3>
+                    <p class="text-gray-600 text-center">
+                        <a href="mailto:smita.vhatkar@gmail.com" class="contact-link hover:text-green-600 transition-colors">
+                            smita.vhatkar@gmail.com
+                        </a>
+                    </p>
                 </div>
-                <div class="text-center">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-map-marker-alt text-green-600"></i>
+
+                <div class="bg-white p-4 md:p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
+                        <i class="fas fa-map-marker-alt text-green-600 text-xl md:text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2">Address</h3>
-                    <p class="text-gray-600">
+                    <h3 class="text-xl font-bold text-center mb-3 md:mb-4">Address</h3>
+                    <p class="text-gray-600 text-center text-sm md:text-base">
                         Unit 119, Dattatreya industry estate,<br>
                         Dhuri-2 industry complex, off Sativali Road,<br>
                         Dist - Palghar, Vasai - E, Pin Code - 401208
