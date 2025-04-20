@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayurvedic Health Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-green-700 text-white">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <a href="index.html">
+                    <img src="images/logo.jpeg" alt="Vimalhira Ayur Pharma Logo" class="h-12 w-auto rounded">
+                </a>
+                <span class="text-xl font-bold">Vimalhira Ayur Pharma</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="hover:text-green-200 flex items-center space-x-2">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#about" class="hover:text-green-200 flex items-center space-x-2">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About</span>
+                </a>
+                <a href="products.html" class="hover:text-green-200 flex items-center space-x-2">
+                    <i class="fas fa-leaf"></i>
+                    <span>Products</span>
+                </a>
+                <a href="#cart" class="hover:text-green-200 flex items-center space-x-2">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="relative">
+                        Cart
+                        <span class="absolute -top-2 -right-4 bg-green-500 text-xs rounded-full w-5 h-5 flex items-center justify-center" id="cart-count">0</span>
+                    </span>
+                </a>
+            </div>
+            <button class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-green-600 text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Natural Ayurvedic Solutions for Better Health</h1>
+                <p class="text-xl mb-8 flex items-center space-x-2">
+                    <i class="fas fa-heart text-green-300"></i>
+                    <span>Discover our range of authentic Ayurvedic products for holistic wellness</span>
+                </p>
+                <a href="#products" class="bg-white text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-green-100 transition flex items-center space-x-2 w-max">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>Shop Now</span>
+                </a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 right-0 opacity-10">
+            <i class="fas fa-leaf text-9xl"></i>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="products" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Featured Products</h2>
+            <p class="text-center mb-12 flex items-center justify-center text-gray-600">
+                <i class="fas fa-star text-yellow-500 mr-2"></i>
+                Our Most Popular Ayurvedic Solutions
+            </p>
+            <div id="featured-products" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Products will be loaded dynamically -->
+            </div>
+            <div class="text-center mt-8">
+                <a href="products.html" class="inline-flex items-center space-x-2 bg-green-700 text-white px-8 py-3 rounded-full hover:bg-green-600 transition">
+                    <i class="fas fa-th-large"></i>
+                    <span>View All Products</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-green-50 py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-8">About Vimalhira Ayur Pharma</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <img src="images/About.jpeg" alt="Dr. Smita Vhatkar Kothmire" class="rounded-lg shadow-lg w-full mb-6">
+                        </div>
+                        <div class="text-left">
+                            <h3 class="text-xl font-bold mb-4 text-green-700 flex items-center">
+                                <i class="fas fa-user-md mr-2"></i>
+                                Dr. Smita Vhatkar Kothmire
+                            </h3>
+                            <p class="text-gray-700 mb-6">
+                                With 25 years of experience in Research and Development, Dr. Smita leads our commitment to authentic Ayurvedic solutions. A topper from Podar Ayurvedic Medical College, Mumbai, she ensures the highest quality standards in all our products.
+                            </p>
+                            <div class="space-y-2 mb-8">
+                                <p class="text-gray-700 flex items-center">
+                                    <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                                    State-of-the-art manufacturing facility
+                                </p>
+                                <p class="text-gray-700 flex items-center">
+                                    <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                                    Quality-tested products
+                                </p>
+                                <p class="text-gray-700 flex items-center">
+                                    <i class="fas fa-check-circle text-green-600 mr-2"></i>
+                                    Research-backed formulations
+                                </p>
+                            </div>
+                            <a href="about.html" class="inline-flex items-center space-x-2 bg-green-700 text-white px-8 py-3 rounded-full hover:bg-green-600 transition">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Learn More About Us</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section id="cart" class="fixed top-0 right-0 h-full w-80 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="p-4">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-bold flex items-center">
+                    <i class="fas fa-shopping-cart mr-2"></i>
+                    Your Cart
+                </h2>
+                <button class="text-gray-500 hover:text-gray-700" onclick="closeCart()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="cart-items" class="space-y-4">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="border-t mt-4 pt-4">
+                <div class="flex justify-between mb-4">
+                    <span class="font-bold">Total:</span>
+                    <span class="font-bold">₹0</span>
+                </div>
+                <button class="w-full bg-green-700 text-white py-2 rounded hover:bg-green-600 flex items-center justify-center space-x-2">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Checkout</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i>
+                        Contact Us
+                    </h3>
+                    <p class="flex items-center mb-2">
+                        <i class="fas fa-envelope mr-2"></i>
+                        info@ayurhealth.com
+                    </p>
+                    <p class="flex items-center">
+                        <i class="fas fa-phone mr-2"></i>
+                        +91 1234567890
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <i class="fas fa-link mr-2"></i>
+                        Quick Links
+                    </h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="hover:text-green-200 flex items-center">
+                                <i class="fas fa-chevron-right mr-2"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about" class="hover:text-green-200 flex items-center">
+                                <i class="fas fa-chevron-right mr-2"></i>
+                                About
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#products" class="hover:text-green-200 flex items-center">
+                                <i class="fas fa-chevron-right mr-2"></i>
+                                Products
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4 flex items-center">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Newsletter
+                    </h3>
+                    <form class="flex">
+                        <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded-l text-black flex-1">
+                        <button class="bg-green-600 px-4 py-2 rounded-r hover:bg-green-500 flex items-center">
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Load featured products
+        async function loadFeaturedProducts() {
+            try {
+                const response = await fetch('products.json');
+                const data = await response.json();
+                
+                // Select first 3 products as featured
+                const featuredProducts = data.products.slice(0, 3);
+                const container = document.getElementById('featured-products');
+                
+                featuredProducts.forEach(product => {
+                    const productCard = `
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <div class="p-6">
+                                <div class="aspect-w-1 aspect-h-1 mb-4">
+                                    <img src="${product.image}" 
+                                        alt="${product.name}" 
+                                        class="w-full h-48 object-cover rounded-lg">
+                                </div>
+                                <h3 class="text-xl font-bold mb-2">${product.name}</h3>
+                                <p class="text-gray-600 mb-4 flex items-center">
+                                    <i class="fas fa-circle text-xs text-green-500 mr-2"></i>
+                                    ${product.description}
+                                </p>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-green-700 font-bold flex items-center">
+                                        <i class="fas fa-indian-rupee-sign mr-1"></i>
+                                        ${product.price}
+                                    </span>
+                                    <button class="bg-green-700 text-white px-4 py-2 rounded hover:bg-green-600 flex items-center space-x-2">
+                                        <i class="fas fa-cart-plus"></i>
+                                        <span>Add to Cart</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.innerHTML += productCard;
+                });
+            } catch (error) {
+                console.error('Error loading featured products:', error);
+            }
+        }
+
+        // Cart functionality
+        function closeCart() {
+            document.getElementById('cart').classList.add('translate-x-full');
+        }
+
+        function openCart() {
+            document.getElementById('cart').classList.remove('translate-x-full');
+        }
+
+        // Call the function when the page loads
+        document.addEventListener('DOMContentLoaded', loadFeaturedProducts);
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html> 

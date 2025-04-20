@@ -1,0 +1,100 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "DIBOVIM POWDER",
+            "description": "Control blood sugar & its complications",
+            "price": 299,
+            "category": "Powder",
+            "image": "images/dibovim-powder.jpg"
+        },
+        {
+            "id": 2,
+            "name": "ORTHOVIM OIL",
+            "description": "Useful in all type of pain (external use only)",
+            "price": 199,
+            "category": "Oil",
+            "image": "images/orthovim-oil.jpg"
+        },
+        {
+            "id": 3,
+            "name": "VIMARTHO TABLET",
+            "description": "Useful in joint pain, back pain, Lumber pain",
+            "price": 249,
+            "category": "Tablet",
+            "image": "images/vimartho-tablet.jpg"
+        },
+        {
+            "id": 4,
+            "name": "VIMALHIRA GARCINIA CAPSULE",
+            "description": "Useful in weight loss",
+            "price": 349,
+            "category": "Capsule",
+            "image": "images/vimalhira-capsule.jpg"
+        },
+        {
+            "id": 5,
+            "name": "ACE NEEL TABLET",
+            "description": "Useful in acidity",
+            "price": 179,
+            "category": "Tablet",
+            "image": "images/ace-neel-tablet.jpg"
+        },
+        {
+            "id": 6,
+            "name": "AVIPATTIKAR TABLET",
+            "description": "Useful in acidity",
+            "price": 189,
+            "category": "Tablet",
+            "image": "images/avipattikar-tablet.jpg"
+        },
+        {
+            "id": 7,
+            "name": "GANDHARV HARITAKI TABLET",
+            "description": "Useful in constipation",
+            "price": 199,
+            "category": "Tablet",
+            "image": "images/gandharv-haritaki-tablet.jpg"
+        },
+        {
+            "id": 8,
+            "name": "HEMOVIM TABLET",
+            "description": "Useful in piles",
+            "price": 259,
+            "category": "Tablet",
+            "image": "images/hemovim-tablet.jpg"
+        },
+        {
+            "id": 9,
+            "name": "DIBOVIM TABLET",
+            "description": "Useful in madhumeh for control blood sugar & its complications",
+            "price": 289,
+            "category": "Tablet",
+            "image": "images/dibovim-tablet.jpg"
+        },
+        {
+            "id": 10,
+            "name": "SHATAVARI TABLET",
+            "description": "Useful as Tonic",
+            "price": 219,
+            "category": "Tablet",
+            "image": "images/shatavari-tablet.jpg"
+        },
+        {
+            "id": 11,
+            "name": "ASHWAGANDHA TABLET",
+            "description": "Useful as Tonic",
+            "price": 229,
+            "category": "Tablet",
+            "image": "images/ashwagandha-tablet.jpg"
+        },
+        {
+            "id": 12,
+            "name": "GUDUCHI GHANVATI",
+            "description": "Useful in fever & Tonic",
+            "price": 209,
+            "category": "Tablet",
+            "image": "images/guduchi-ghanvati.jpg"
+        }
+    ]
+} 
